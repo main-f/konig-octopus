@@ -6,6 +6,6 @@ https://main-f.github.io/konig-octopus/
 
 Have fun!
 
-Story & Script: 叶子不想上班
+Story & Script: 叶子不想上班  
 StoIllustration: 叶子不想上班  
 Website Development: main/面
