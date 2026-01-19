@@ -6,7 +6,6 @@
   --btn: rgba(255,255,255,0.10);
   --btn2: rgba(255,255,255,0.16);
   --text-on-card: #1b1b1b; 
-<<<<<<< HEAD
 }
 
 /* 夜间模式遮罩（覆盖画面但不阻塞交互）
@@ -20,8 +19,6 @@
   background: rgba(6, 10, 18, 0.25); /* 可调整透明度来控制暗度 */
   mix-blend-mode: normal;
   z-index: 10; /* 在 .hud (60) 之下，让 HUD 保持亮度 */
-=======
->>>>>>> 1fd02ed (Updates based on some detailed requirements.)
 }
 
 :root[data-theme="day"] {
@@ -62,11 +59,7 @@ html, body {
 .character {
   position: absolute;
   left: 50%;
-<<<<<<< HEAD
   bottom: 60%;
-=======
-  bottom: 50%;
->>>>>>> 1fd02ed (Updates based on some detailed requirements.)
   transform: translateX(-50%);
   max-width: min(72vw, 420px);
   height: auto;
@@ -97,7 +90,6 @@ html, body {
 }
 
 .dialogue {
-<<<<<<< HEAD
   position: relative;
   padding: 16px;
 
@@ -119,54 +111,6 @@ html, body {
   /* 内边距响应式：在小屏缩小，在大屏放大 */
   padding: clamp(12px, 3.5vw, 24px);
 
-=======
-  /* khaki opaque card */
-  --dialogue-bg: #fae3a0; /* khaki-ish */
-  --dialogue-outer: #2f1a0c; /* outer border color */
-  --dialogue-inner: #e8c99a; /* inner border color */
-
-  position: relative;
-  background: var(--dialogue-bg);
-  --r: 5px;        /* 统一定义圆角 */
-  border-radius: var(--r);
-  padding: 16px;
-  box-shadow: 0 6px 24px rgba(9,10,12,0.18);
-  /* remove translucent backdrop so card is opaque */
-  backdrop-filter: none;
-  z-index: 0;
-
-  bottom: 30%;
-  color: var(--text-on-card);
-}
-
-/* double-line border using pseudo elements */
-.dialogue::before,
-.dialogue::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: inherit;
-  pointer-events: none;
-}
-
-.dialogue::before {
-  /* outer thicker border (drawn slightly outside using negative inset) */
-  inset: -6px;
-  border-radius: calc(var(--r) + 6px);
-  border: 2px solid var(--dialogue-outer);
-  box-shadow: 0 6px 0 rgba(0,0,0,0.08) inset;
-  z-index: -2;
-}
-
-.dialogue::after {
-  /* inner thin border */
-  inset: 4px;
-  border: 2px solid var(--dialogue-inner);
-  z-index: -1;
->>>>>>> 1fd02ed (Updates based on some detailed requirements.)
 }
 
 .speaker {
@@ -217,10 +161,6 @@ html, body {
   display: inline-flex; /* 让按钮内部内容居中 */
   align-items: center;
   justify-content: center;
-<<<<<<< HEAD
-=======
-  height: 56px; /* 与 .btn-stamp 一致 */
->>>>>>> 1fd02ed (Updates based on some detailed requirements.)
   cursor: pointer;
   /* 保持 btn-stamp 的尺寸优先（.btn-stamp 会给出宽度），但允许在小屏幕收缩 */
   flex: 0 1 160px;
@@ -282,11 +222,7 @@ html, body {
   }
 }
 
-<<<<<<< HEAD
 /* ===== Ending Screen (new layout) ===== */
-=======
-/* ===== Ending Screen ===== */
->>>>>>> 1fd02ed (Updates based on some detailed requirements.)
 
 .ending-root {
   min-height: 100dvh;
@@ -385,7 +321,6 @@ html, body {
   color: #fff;
 }
 
-<<<<<<< HEAD
 /* EndingScreen.tsx 实际用的是 ending-frameWrap */
 .ending-frameWrap {
   flex: 0 0 48vh;          /* 上半屏固定占位 */
@@ -400,8 +335,6 @@ html, body {
 }
 
 
-=======
->>>>>>> 1fd02ed (Updates based on some detailed requirements.)
 /* 叶子老师需要的按钮样式 */
 /* Stamp-plate button (像截图那种扁平双边框按钮) */
 .btn-stamp {
@@ -429,15 +362,11 @@ html, body {
 
   background: var(--base);
   color: var(--text);
-<<<<<<< HEAD
   box-sizing: border-box;
   /* 宽度行为：在大屏保持不超过 160px（不被放大），当视口比这个小时才收缩 */
   max-width: 160px;
   margin-left: auto;
   margin-right: auto;
-=======
-
->>>>>>> 1fd02ed (Updates based on some detailed requirements.)
   /* 文字更像截图：粗、稳、略复古 */
   font-family: Georgia, "Times New Roman", serif;
   font-weight: 800;
@@ -477,11 +406,7 @@ html, body {
 /* 我们定义 4 色循环：1 红、2 蓝、3 绿、4 紫 */
 .choices .choice:nth-child(4n+1) { --base: #ec6735; } /* red */
 .choices .choice:nth-child(4n+2) { --base: #3b82f6; } /* blue */
-<<<<<<< HEAD
 .choices .choice:nth-child(4n+3) { --base: #58c163; } /* green */
-=======
-.choices .choice:nth-child(4n+3) { --base: #35ec47; } /* green */
->>>>>>> 1fd02ed (Updates based on some detailed requirements.)
 .choices .choice:nth-child(4n+4) { --base: #8b5cf6; } /* purple */
 
 /* 可选：为第一个按钮（主要动作）添加更明显的高亮样式 */
@@ -523,7 +448,6 @@ html, body {
 
 /* 中等屏：尽量两列排列（先左后右，满一行再换行） */
 @media (min-width: 421px) and (max-width: 760px) {
-<<<<<<< HEAD
   .dialogue { 
     min-height: 190px; /* 你可以试 170/190/210 */ 
     display: flex; 
@@ -534,11 +458,6 @@ html, body {
     flex: 0 1 100%;
     max-width: 40%;
     height: 52px;
-=======
-  .choice {
-    flex: 0 1 48%; /* 两列优先 */
-    max-width: 48%;
->>>>>>> 1fd02ed (Updates based on some detailed requirements.)
   }
 
   .btn-stamp {
